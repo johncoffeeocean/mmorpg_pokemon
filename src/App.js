@@ -11,27 +11,65 @@ document.addEventListener("keydown", (event) => {
     event.preventDefault();
   }
 });
-var startPoint=[-1,-1,-1]
-var endPoint=[-1,-1]
+var startPoint = [-1, -1, -1]
+var endPoint = [-1, -1]
 function App() {
   let game = null;
-
-  var pointList=[];
-  var buttonClickHandle = (point,pointData,index)=>{
+  var pointList=[]
+  function findShortestPath(startNodeIndex, endNodeIndex) {
+    const visitedNodes = [];
+    const nodesToVisit = [[startNodeIndex, []]];
+    while (nodesToVisit.length > 0) {
+      const [currentNodeIndex, currentPath] = nodesToVisit.shift();
+      if (visitedNodes.includes(currentNodeIndex)) {
+        continue;
+      }
+      if (currentNodeIndex === endNodeIndex) {
+        return [...currentPath, endNodeIndex];
+      }
+      visitedNodes.push(currentNodeIndex);
+      var relatedNodes = mapData.point[currentNodeIndex][2];
+      for (const relatedNodeIndex of relatedNodes) {
+        nodesToVisit.push([relatedNodeIndex, [...currentPath, currentNodeIndex]]);
+      }
+    }
+    return [];
+  }
+  var buttonClickHandle = (point, pointData, index) => {
     console.log(startPoint)
-    if(startPoint[0]===-1){
+    if (startPoint[0] === -1) {
       point.setFrame(1)
-      startPoint=[...pointData[1],index]
+      startPoint = [...pointData[1], index]
       point.setFrame(1)
-      // startPoint={x:pointData[1][0],y:pointData[1][1]}
       return;
     }
-    if(startPoint[0]!==-1){
-      point.setFrame(3)
+    if (startPoint[0] !== -1) {
+      let nodeList=findShortestPath(startPoint[2],index)
+      console.log(nodeList)
+      for(let i=0;i<pointList.length;i++){
+         pointList[i].point.setFrame(0)
+        
+      }
+      pointList[nodeList[0]-1].point.setFrame(1)
+      for(let i=1;i<nodeList.length-1;i++){
+        
+        if(nodeList[i]<56){
+          pointList[nodeList[i]-1].point.setFrame(3)
+        }
+      }
       
-      return
+      point.setFrame(1)
+      return;
     }
 
+  }
+  var clearPath = () =>{
+    startPoint=[-1,-1,-1]
+    endPoint=[-1,-1,-1]
+    for(let i=0;i<pointList.length;i++){
+      pointList[i].point.setFrame(0)
+     
+   }
   }
   useEffect(() => {
     if (game === null) {
@@ -56,7 +94,7 @@ function App() {
             bg.setDisplaySize(1000, 1000);
             let mapPoint = mapData.point;
             for (let i = 1; i < mapPoint.length; i++) {
-              const pointObject = new PointObject(index,mapPoint[i], this, buttonClickHandle);
+              const pointObject = new PointObject(i, mapPoint[i], this, buttonClickHandle);
               pointObject.create()
               pointList.push(pointObject)
             }
@@ -73,7 +111,7 @@ function App() {
       <div id="game-container" className='absolute'>
       </div>
       <div className='w-[1000px] mx-auto'>
-        <button className='absolute w-5 h-5 bg-blue-500 rounded-md hover:bg-black'></button>
+        <button className='absolute w-5 h-5 bg-blue-500 rounded-md hover:bg-black' onClick={clearPath}></button>
       </div>
       {/* <PointsGroup mapData={mapData} /> */}
     </div>

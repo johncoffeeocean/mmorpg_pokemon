@@ -12,15 +12,17 @@ const Header = () => {
         <div className="header_nav">
           <ul className="gnb">
             <li className="gnb_item ">
-              <a href="#" id="main_menu0" className="gnb_link">
+              <a href="/news" id="main_menu0" className="gnb_link">
                 News
               </a>
               <div className="lnb">
                 <ul className="lnb_list">
                   <a href="#">
                     <li className="lnb_item">
-                      {" "}
-                      <span className="lnb_link ">ITEM 1</span>{" "}
+                      <span className="lnb_link ">ITEM 1</span>
+                    </li>
+                    <li className="lnb_item">
+                      <span className="lnb_link ">ITEM 1</span>
                     </li>
                   </a>
                 </ul>
@@ -30,20 +32,19 @@ const Header = () => {
 
           <ul className="gnb">
             <li className="gnb_item ">
-              <a href="#" id="main_menu0" className="gnb_link">
+              <a href="/gameinfo" id="main_menu0" className="gnb_link">
                 Game Information
               </a>
               <div className="lnb">
                 <ul className="lnb_list">
-                  <a href="#">
+                  <a href="/items">
                     <li className="lnb_item">
-                      <span className="lnb_link ">ITEM 1</span>{" "}
+                      <span className="lnb_link ">Items</span>
                     </li>
+                  </a>
+                  <a href="/monsters">
                     <li className="lnb_item">
-                      <span className="lnb_link ">ITEM 2</span>{" "}
-                    </li>
-                    <li className="lnb_item">
-                      <span className="lnb_link ">ITEM 3</span>{" "}
+                      <span className="lnb_link ">Monsters</span>
                     </li>
                   </a>
                 </ul>
@@ -60,10 +61,10 @@ const Header = () => {
                 <ul className="lnb_list">
                   <a href="#">
                     <li className="lnb_item">
-                      <span className="lnb_link ">ITEM 1</span>{" "}
+                      <span className="lnb_link ">ITEM 1</span>
                     </li>
                     <li className="lnb_item">
-                      <span className="lnb_link ">ITEM 2</span>{" "}
+                      <span className="lnb_link ">ITEM 2</span>
                     </li>
                   </a>
                 </ul>
@@ -80,10 +81,30 @@ const Header = () => {
                 <ul className="lnb_list">
                   <a href="#">
                     <li className="lnb_item">
-                      <span className="lnb_link ">ITEM 1</span>{" "}
+                      <span className="lnb_link ">ITEM 1</span>
                     </li>
                     <li className="lnb_item">
-                      <span className="lnb_link ">ITEM 2</span>{" "}
+                      <span className="lnb_link ">ITEM 2</span>
+                    </li>
+                  </a>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <ul className="gnb">
+            <li className="gnb_item ">
+              <a href="#" id="main_menu0" className="gnb_link">
+                Menu 1
+              </a>
+              <div className="lnb">
+                <ul className="lnb_list">
+                  <a href="#">
+                    <li className="lnb_item">
+                      <span className="lnb_link ">ITEM 1</span>
+                    </li>
+                    <li className="lnb_item">
+                      <span className="lnb_link ">ITEM 1</span>
                     </li>
                   </a>
                 </ul>

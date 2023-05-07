@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="fixed w-full footer bottom-0">
       <div className="footer_wrap">
         <div className="footer_sns sns_links">
           <a href="#" target="_blank" className="sns_btn sns_btn--discord">

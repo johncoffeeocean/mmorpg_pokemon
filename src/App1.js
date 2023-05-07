@@ -6,7 +6,7 @@ import cloudJson from "./assets/cloud-city.json";
 import characters from "./assets/characters.png";
 import './App.css';
 
-function App() {
+function App1() {
   let game = null;
 
   useEffect(() => {
@@ -98,4 +98,4 @@ function App() {
   return <div id="game"></div>;
 }
 
-export default App;
+export default App1;

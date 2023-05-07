@@ -1427,7 +1427,7 @@ body.offset--hidden {
   min-width: 1280px;
 }
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 8;

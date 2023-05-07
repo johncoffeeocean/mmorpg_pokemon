@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -122,9 +123,9 @@ const Header = () => {
             </li>
           </ul>
 
-          <a href="/" className="header_gamestart">
+          <Link to="/gamewindow" className="header_gamestart">
             Play Now
-          </a>
+          </Link>
         </div>
       </div>
     </div>

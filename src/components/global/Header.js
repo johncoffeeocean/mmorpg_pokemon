@@ -6,26 +6,26 @@ const Header = () => {
     <div className="header">
       <div className="header_wrap">
         <h1 className="header_bi">
-          <a href="" className="link ir_bd">
+          <Link to="" className="link ir_bd">
             LOGO
-          </a>
+          </Link>
         </h1>
         <div className="header_nav">
           <ul className="gnb">
             <li className="gnb_item ">
-              <a href="/news" id="main_menu0" className="gnb_link">
+              <Link to="/news" id="main_menu0" className="gnb_link">
                 News
-              </a>
+              </Link>
               <div className="lnb">
                 <ul className="lnb_list">
-                  <a href="#">
+                  <Link to="#">
                     <li className="lnb_item">
                       <span className="lnb_link ">ITEM 1</span>
                     </li>
                     <li className="lnb_item">
                       <span className="lnb_link ">ITEM 1</span>
                     </li>
-                  </a>
+                  </Link>
                 </ul>
               </div>
             </li>
@@ -33,21 +33,21 @@ const Header = () => {
 
           <ul className="gnb">
             <li className="gnb_item ">
-              <a href="/gameinfo" id="main_menu0" className="gnb_link">
+              <Link to="/gameinfo" id="main_menu0" className="gnb_link">
                 Game Information
-              </a>
+              </Link>
               <div className="lnb">
                 <ul className="lnb_list">
-                  <a href="/items">
+                  <Link to="/items">
                     <li className="lnb_item">
                       <span className="lnb_link ">Items</span>
                     </li>
-                  </a>
-                  <a href="/monsters">
+                  </Link>
+                  <Link to="/monsters">
                     <li className="lnb_item">
                       <span className="lnb_link ">Monsters</span>
                     </li>
-                  </a>
+                  </Link>
                 </ul>
               </div>
             </li>
@@ -55,19 +55,19 @@ const Header = () => {
 
           <ul className="gnb">
             <li className="gnb_item ">
-              <a href="#" id="main_menu0" className="gnb_link">
+              <Link to="#" id="main_menu0" className="gnb_link">
                 Community
-              </a>
+              </Link>
               <div className="lnb">
                 <ul className="lnb_list">
-                  <a href="#">
+                  <Link to="#">
                     <li className="lnb_item">
                       <span className="lnb_link ">ITEM 1</span>
                     </li>
                     <li className="lnb_item">
                       <span className="lnb_link ">ITEM 2</span>
                     </li>
-                  </a>
+                  </Link>
                 </ul>
               </div>
             </li>
@@ -75,19 +75,19 @@ const Header = () => {
 
           <ul className="gnb">
             <li className="gnb_item ">
-              <a href="#" id="main_menu0" className="gnb_link">
+              <Link to="#" id="main_menu0" className="gnb_link">
                 Cashshop
-              </a>
+              </Link>
               <div className="lnb">
                 <ul className="lnb_list">
-                  <a href="#">
+                  <Link to="#">
                     <li className="lnb_item">
                       <span className="lnb_link ">ITEM 1</span>
                     </li>
                     <li className="lnb_item">
                       <span className="lnb_link ">ITEM 2</span>
                     </li>
-                  </a>
+                  </Link>
                 </ul>
               </div>
             </li>
@@ -95,19 +95,19 @@ const Header = () => {
 
           <ul className="gnb">
             <li className="gnb_item ">
-              <a href="#" id="main_menu0" className="gnb_link">
-                Menu 1
-              </a>
+              <Link to="/map_editor" id="main_menu0" className="gnb_link">
+                Map Editor
+              </Link>
               <div className="lnb">
                 <ul className="lnb_list">
-                  <a href="#">
+                  <Link to="#">
                     <li className="lnb_item">
                       <span className="lnb_link ">ITEM 1</span>
                     </li>
                     <li className="lnb_item">
                       <span className="lnb_link ">ITEM 1</span>
                     </li>
-                  </a>
+                  </Link>
                 </ul>
               </div>
             </li>
@@ -115,11 +115,15 @@ const Header = () => {
 
           <ul className="util">
             <li className="util_item">
-              <a href="#" className="util_link util_link--login" title="Log-in">
+              <Link
+                to="#"
+                className="util_link util_link--login"
+                title="Log-in"
+              >
                 <i className="ico_comm ico_user"></i>
                 <span className="headtext">Login</span>
                 <span className="ir_pm">Log-in</span>
-              </a>
+              </Link>
             </li>
           </ul>
 

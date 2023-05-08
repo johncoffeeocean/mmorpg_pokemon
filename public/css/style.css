@@ -448,3 +448,14 @@
     padding: 0;
   }
 }
+
+#map_editor_building {
+  color: #0074d9;
+  /* cursor: pointer;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Ccircle cx='15' cy='15' r='15' fill='%230079d9' /%3E%3C/svg%3E")
+      15 15,
+    auto; */
+}
+#map_editor_road {
+  color: #7400d9;
+}

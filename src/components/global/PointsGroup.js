@@ -8,7 +8,7 @@ export default class PointObject extends Phaser.Scene {
     this.buttonClickHandle=buttonClickHandle
 
     if(this.pointData[1][0]>0)
-      this.point = this.window.add.sprite(this.window.cameras.main.centerX - window.cameras.main.width/2 + (this.pointData[1][0]+7) * window.cameras.main.width / 714, this.window.cameras.main.centerY - window.cameras.main.height/2 + (this.pointData[1][1]+7) * window.cameras.main.height / 720, "pointList")
+      this.point = this.window.add.sprite(this.window.cameras.main.centerX - (window.cameras.main.width)/2 + (this.pointData[1][0]+7) * window.cameras.main.width / 714, this.window.cameras.main.centerY - window.cameras.main.height/2 + (this.pointData[1][1]+7) * window.cameras.main.height / 720, "pointList")
     else
       this.point = null;
   }

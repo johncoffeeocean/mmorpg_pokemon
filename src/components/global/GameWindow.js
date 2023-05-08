@@ -13,6 +13,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 var startNode = 23
+var locationContainerText=null;
 function GameWindow() {
   let game = null;
   let locationContainer = null;
@@ -39,13 +40,11 @@ function GameWindow() {
   var buttonClickHandle = (point, pointData, index) => {
     console.log(point)
 
-
     let nodeList = findShortestPath(startNode, index)
     console.log(pointList)
     for (let i = 0; i < pointList.length; i++) {
       pointList[i].point.setFrame(0)
     }
-    console.log('asdfasdf')
     pointList[nodeList[0] - 1].point.setFrame(1)
     for (let i = 1; i < nodeList.length - 1; i++) {
 
@@ -55,6 +54,8 @@ function GameWindow() {
     }
 
     point.setFrame(1)
+    let showString="It will take "+(nodeList.length-1)+" hours to reach there"
+    locationContainerText.setText(showString);
     return;
 
   }
@@ -197,9 +198,10 @@ function GameWindow() {
           },
 
           create: function () {
-
             let locationImageObject=this.add.image(this.cameras.main.centerX,height*this.cameras.main.width/width/2,"location-image")
             locationImageObject.setDisplaySize(this.cameras.main.width,height*this.cameras.main.width/width)
+            // locationContainer.colo
+            locationContainerText = this.add.text(this.cameras.main.centerX*10/100,3*height*this.cameras.main.width/width/2, '', { font: '24px Arial', fill: '#ffffff' });
             
           }
         }

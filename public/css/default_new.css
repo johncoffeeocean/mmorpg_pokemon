@@ -1427,7 +1427,7 @@ body.offset--hidden {
   min-width: 1280px;
 }
 .header {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 8;
@@ -4171,11 +4171,13 @@ body.offset--hidden {
   cursor: default;
 }
 .main_prom {
-  height: 752px;
+  height: 100vh;
 }
 .main_prom .main_prom_banner {
   top: -90px;
   transition: top 0.5s ease;
+  width: 100%;
+  height: 100%;
 }
 .main_prom.wire--active .main_prom_banner {
   top: 0;
@@ -4199,11 +4201,11 @@ body.offset--hidden {
   color: #fff;
 }
 .main_prom_img {
-  width: 2560px;
+  width: 100%;
   position: absolute;
   top: 0;
-  left: 50%;
-  margin-left: -1280px;
+  /* left: 50%; */
+  /* margin-left: -1280px; */
 }
 .main_prom_more {
   display: inline-block;

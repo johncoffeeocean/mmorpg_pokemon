@@ -3,6 +3,7 @@ import imgBackground from "../../assets/images/dashboard_background.jpg";
 import imgBackBoy from "../../assets/images/dashboard_boy.png";
 import imgBackGirl from "../../assets/images/dashboard_girl.png";
 import imgBackMon from "../../assets/images/dashboard_monster.png";
+import Footer from "./Footer";
 
 const BRANDS = ["Mercedes", "Ferrari", "Porsche", "Lamborghini"];
 
@@ -51,6 +52,7 @@ const Dashboard = () => {
           </ul>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

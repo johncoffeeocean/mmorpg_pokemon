@@ -6,10 +6,11 @@ import Page404 from "./components/global/Page404";
 import MapEditor from "./components/global/MapEditor";
 import GameWindow from "./components/global/GameWindow";
 import Dashboard from "./components/global/Dashboard";
-import News from "./components/news/News";
+import GameWindow from "./components/global/GameWindow";
 import GameInfo from "./components/gameinfo/GameInfo";
-import Items from "./components/gameinfo/Items";
 import Monsters from "./components/gameinfo/Monsters";
+import Items from "./components/gameinfo/Items";
+import News from "./components/news/News";
 
 // import Error from "./Components/Error";
 
@@ -23,12 +24,13 @@ function App() {
           <Route path="/gamewindow" element={<GameWindow />} />
           <Route path="/news" element={<News />} />
           <Route path="/gameinfo" element={<GameInfo />} />
-          <Route path="/items" element={<Items />} />
           <Route path="/monsters" element={<Monsters />} />
           <Route path="/map_editor" element={<MapEditor />} />
           <Route path="/*" element={<Page404 />} />
+          <Route path="/items" element={<Items />} />
+          {/* <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} /> */}
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   );

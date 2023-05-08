@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import imgBackground from "../../assets/images/dashboard_background.jpg";
+import Footer from "./Footer";
 
 const BRANDS = ["Mercedes", "Ferrari", "Porsche", "Lamborghini"];
 
@@ -23,8 +24,9 @@ const Dashboard = () => {
           </ul>
         </div>
       </div>
+      <Footer/>
     </div>
-  );
+  )
 };
 
 export default Dashboard;

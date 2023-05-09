@@ -11,7 +11,12 @@ import Items from "./components/gameinfo/Items";
 import News from "./components/news/News";
 
 // import Error from "./Components/Error";
-
+document.addEventListener('wheel', (event) => {
+    if (event.ctrlKey) {
+    document.body.style.zoom="100%"
+    event.preventDefault();
+  }
+});
 function App() {
   return (
     <div className="App relative">

@@ -20,7 +20,7 @@ const Monsters = () => {
   }
 
   return (
-    <div className=" p-8 ">
+    <div className="mt-24 p-8 ">
       <Search onHandleSearch={handleSearch} />
       {monsters ? <Grid monsters={monsters} /> : <div>'Pokemon not found'</div>}
     </div>

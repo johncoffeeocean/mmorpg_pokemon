@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "eslint-plugin-flowtype": "^8.0.3",
+    "fortawesome": "0.0.1-security",
     "grid-engine": "^2.15.0",
     "phaser": "^3.55.2",
     "react": "^18.1.0",
@@ -39,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "phasereditor2d-launcher": "^3.60.3"
   }
 }

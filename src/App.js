@@ -13,7 +13,12 @@ import News from "./components/news/News";
 import { useEffect, useState } from "react";
 
 // import Error from "./Components/Error";
-
+document.addEventListener('wheel', (event) => {
+    if (event.ctrlKey) {
+    document.body.style.zoom="100%"
+    event.preventDefault();
+  }
+});
 function App() {
   const [showHearder, setShowHeader] = useState(true);
 
